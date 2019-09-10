@@ -1,0 +1,22 @@
+# Tomcat 配置
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8888
+  connection-timeout: 5000ms
+# Spring 配置
+spring:
+  application:
+    name: dubbo-demo-consume
+# Dubbo 配置文件
+dubbo:
+  application:
+    name: dubbo-demo-consume
+  registry:
+    address: 10.100.2.163:2181
+    protocol: zookeeper
+# 配置日志
+logging:
+  config: classpath:log4j2-spring.xml
